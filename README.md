@@ -8,6 +8,10 @@ This script uses API tokens to work.
 Input your Todoist API token in Tokens/todoist.txt. In order to get your API token go to [https://todoist.com/prefs/integrations](https://todoist.com/prefs/integrations).
 ### Canvas
 Input your Canvas API token in Tokens/canvas.txt. 
+To generate a token for:
+1. Click the "profile" link in the top right menu bar, or navigate to /profile
+2. Under the "Approved Integrations" section, click the button to generate a new access token.
+3. Once the token is generated, you cannot view it again, and you'll have to generate a new token if you forget it. Remember that access tokens are password equivalent, so keep it secret.
 
 ## Authors
 
