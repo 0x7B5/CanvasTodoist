@@ -1,4 +1,4 @@
-CanvasTodoist 
+# CanvasTodoist 
 An automated way to pull all assignments from the Canvas Dashboard to Todoist. 
 
 ## Register API tokens 
