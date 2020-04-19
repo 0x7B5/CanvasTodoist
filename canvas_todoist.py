@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import todoist
 from canvasapi import Canvas
 from datetime import datetime
