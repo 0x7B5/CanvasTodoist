@@ -1,3 +1,6 @@
+import todoist
+from canvasapi import Canvas
+
 def main(): 
     print("Main")
 
