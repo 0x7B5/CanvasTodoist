@@ -65,15 +65,21 @@ def addToTodoist(assignments):
     items = api.state["items"]
 
     for key, value in assignments.items():
+        keep_going = True
         for i in value:
-            if i in items:
-                print("woah")
-                continue
-            else:
+            for item in items:
+                if "in_history" in item:
+                    if item["content"] == i and item["in_history"] == 0:
+                        keep_going = False
+                        break
+                else:
+                    continue
+
+            if keep_going:
+                print("Added")
+                print(item["content"])
                 due = {"date": key}
                 api.items.add(i, due=due)
-                result = api.commit()
-                print(result)
 
 
 def main():
