@@ -81,6 +81,7 @@ def addToTodoist(assignments):
                 print(item["content"])
                 due = {"date": key}
                 api.items.add(i, due=due)
+                api.commit()
 
 
 def main():
