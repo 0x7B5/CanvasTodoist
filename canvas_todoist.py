@@ -8,12 +8,12 @@ import time
 
 
 def getCanvasToken():
-    canvas_token = open("Tokens/canvas.txt", "r")
+    canvas_token = open("/home/0x7d1/Coding/CanvasTodoist/Tokens/canvas.txt", "r")
     return canvas_token.read().strip("\n")
 
 
 def getTodoistToken():
-    canvas_token = open("Tokens/todoist.txt", "r")
+    canvas_token = open("/home/0x7d1/Coding/CanvasTodoist/Tokens/todoist.txt", "r")
     return canvas_token.read().strip("\n")
 
 
@@ -83,9 +83,14 @@ def addToTodoist(assignments):
                 api.items.add(i, due=due)
                 api.commit()
 
+def timeStamp():
+    file = "/home/0x7d1/Coding/CanvasTodoist/time.txt"
+    with open(file, "a") as filetowrite:
+        filetowrite.write(str(datetime.now()) + "\n")
 
 def main():
     addToTodoist(getCanvasEvents())
+    timeStamp()
 
 
 if __name__ == '__main__':
