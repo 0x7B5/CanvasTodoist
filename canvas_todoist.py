@@ -70,7 +70,7 @@ def addToTodoist(assignments):
         for i in value:
             for item in items:
                 if "in_history" in item:
-                    if item["content"] == i and item["in_history"] == 0:
+                    if item["content"] == i and item["in_history"] == 0 and item["date"] == key:
                         keep_going = False
                         break
                 else:
